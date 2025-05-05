@@ -62,17 +62,22 @@ scikit-learn>=1.6.1
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/martharotter/Fetal_Planes_DB.git
-cd Fetal_Planes_DB
+git clone https://github.com/martharotter/Fetal_Planes_CNN.git
+cd Fetal_Planes_CNN
 ```
 
-2. Create and activate a virtual environment (optional but recommended):
+2. Copy images folder to project directory
+```bash
+mv -R $HOME/Downloads/FETAL_PLANES_ZENODO/ .
+```
+
+3. Create and activate a virtual environment (optional but recommended):
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate
 ```
 
-3. Install the required packages:
+4. Install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
@@ -80,7 +85,7 @@ pip install -r requirements.txt
 ## Project Structure
 
 ```
-Fetal_Planes_DB/
+Fetal_Planes_CNN/
 ├── FETAL_PLANES_ZENODO/
 │   ├── Images/                   # Raw unprocessed data
 │   ├── FETAL_PLANES_DB_data.csv  # CSV detailing images
