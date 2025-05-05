@@ -1,0 +1,36 @@
+default: &DEFAULT
+  data_dir: "FETAL_PLANES_ZENODO"
+  num_epochs: 10
+  batch_size: 32
+  lr: 0.0001
+
+INCEPTION:
+  <<: *DEFAULT
+  model_name: inception
+  checkpoint_dir: "checkpoints/inception"
+  log_dir: 'logs/inception'
+  flatten: True
+  gpu_vis_dev: '0'
+  image_size: (299, 299)
+  class_mode: 'categorical'
+
+RESNET50:
+  <<: *DEFAULT
+  model_name: resnet50
+  checkpoint_dir: "checkpoints/resnet50"
+  log_dir: 'logs/resnet50'
+  flatten: False
+  gpu_vis_dev: '0'
+  image_size: (224, 224)
+  class_mode: 'categorical'
+
+CNN:
+  <<: *DEFAULT
+  model_name: cnn
+  checkpoint_dir: "checkpoints/cnn"
+  log_dir: 'logs/cnn'
+  flatten: False
+  gpu_vis_dev: '0'
+  image_size: (224, 224)
+  class_mode: 'categorical'
+  lr: 0.001
