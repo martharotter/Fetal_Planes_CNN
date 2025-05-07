@@ -20,16 +20,13 @@ for image in images:
     image_paths.append(img_path)
     labels.append(image)
 
-# Create a DataFrame for easier metadata exploration
 df = pd.DataFrame({"image_path": image_paths, "label": labels})
 print(f"Loaded {len(df)} images.")
 
-# Basic stats
 print(df.head())
 print("\nClass distribution:")
 print(df["label"].value_counts())
 
-# Check image extensions
 df["extension"] = df["image_path"].apply(lambda x: os.path.splitext(x)[1])
 print("\nFile extensions:")
 print(df["extension"].value_counts())
