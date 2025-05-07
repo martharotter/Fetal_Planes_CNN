@@ -74,6 +74,7 @@ mv -R $HOME/Downloads/FETAL_PLANES_ZENODO/ .
 3. Create and activate a virtual environment (optional but recommended):
 ```bash
 python -m venv venv
+# or conda create -n deeppy12 python=3.12
 source venv/bin/activate
 ```
 
